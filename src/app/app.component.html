@@ -1,0 +1,26 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <!-- Show / Hide using ngIf directive -->
+      <h1 *ngIf="showNow">
+        Name is {{title}}
+      </h1>
+      <br><br>
+      <label><b>First Name</b></label>
+      <!--two way binding -->
+      <input type="text" [(ngModel)]="firstname" #fname>
+      <br><br>
+      <label><b>Last Name</b></label>
+      <input type="text" [(ngModel)]="lastname" #lname>
+      <br><br>
+
+      <!--local template variable passing to click event -->
+      <button type="button" class="btn btn-primary" (click)="setTitle(fname,lname)">Show Title</button>
+      <button type="button" class="btn btn-primary" (click)="hideTitle()">Hide Title</button>
+      <br><br>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+</div>
